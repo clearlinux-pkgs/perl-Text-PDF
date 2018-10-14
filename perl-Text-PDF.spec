@@ -4,16 +4,16 @@
 #
 Name     : perl-Text-PDF
 Version  : 0.31
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/Text-PDF-0.31.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/Text-PDF-0.31.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libt/libtext-pdf-perl/libtext-pdf-perl_0.31-1.debian.tar.xz
 Summary  : 'PDF Manipulation and generation'
 Group    : Development/Tools
 License  : Artistic-2.0
-Requires: perl-Text-PDF-bin
-Requires: perl-Text-PDF-license
-Requires: perl-Text-PDF-man
+Requires: perl-Text-PDF-bin = %{version}-%{release}
+Requires: perl-Text-PDF-license = %{version}-%{release}
+BuildRequires : buildreq-cpan
 
 %description
 Text::PDF
@@ -24,11 +24,20 @@ features you would expect from a PDF manipulation module there are:
 %package bin
 Summary: bin components for the perl-Text-PDF package.
 Group: Binaries
-Requires: perl-Text-PDF-license
-Requires: perl-Text-PDF-man
+Requires: perl-Text-PDF-license = %{version}-%{release}
 
 %description bin
 bin components for the perl-Text-PDF package.
+
+
+%package dev
+Summary: dev components for the perl-Text-PDF package.
+Group: Development
+Requires: perl-Text-PDF-bin = %{version}-%{release}
+Provides: perl-Text-PDF-devel = %{version}-%{release}
+
+%description dev
+dev components for the perl-Text-PDF package.
 
 
 %package license
@@ -39,19 +48,11 @@ Group: Default
 license components for the perl-Text-PDF package.
 
 
-%package man
-Summary: man components for the perl-Text-PDF package.
-Group: Default
-
-%description man
-man components for the perl-Text-PDF package.
-
-
 %prep
-tar -xf %{SOURCE1}
-cd ..
 %setup -q -n Text-PDF-0.31
-mkdir -p %{_topdir}/BUILD/Text-PDF-0.31/deblicense/
+cd ..
+%setup -q -T -D -n Text-PDF-0.31 -b 1
+mkdir -p deblicense/
 mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/Text-PDF-0.31/deblicense/
 
 %build
@@ -76,13 +77,13 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/perl-Text-PDF
-cp LICENSE %{buildroot}/usr/share/doc/perl-Text-PDF/LICENSE
-cp deblicense/copyright %{buildroot}/usr/share/doc/perl-Text-PDF/deblicense_copyright
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Text-PDF
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Text-PDF/LICENSE
+cp deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-Text-PDF/deblicense_copyright
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -91,23 +92,23 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Array.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Bool.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Dict.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/File.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Filter.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Name.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Null.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Number.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Objind.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Page.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Pages.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/SFont.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/String.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/TTFont.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/TTFont0.pm
-/usr/lib/perl5/site_perl/5.26.1/Text/PDF/Utils.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Array.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Bool.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Dict.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/File.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Filter.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Name.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Null.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Number.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Objind.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Page.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Pages.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/SFont.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/String.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/TTFont.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/TTFont0.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Utils.pm
 
 %files bin
 %defattr(-,root,root,-)
@@ -115,12 +116,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/bin/pdfrevert
 /usr/bin/pdfstamp
 
-%files license
-%defattr(-,root,root,-)
-/usr/share/doc/perl-Text-PDF/LICENSE
-/usr/share/doc/perl-Text-PDF/deblicense_copyright
-
-%files man
+%files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Text::PDF.3
 /usr/share/man/man3/Text::PDF::Array.3
@@ -139,3 +135,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Text::PDF::TTFont.3
 /usr/share/man/man3/Text::PDF::TTFont0.3
 /usr/share/man/man3/Text::PDF::Utils.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Text-PDF/LICENSE
+/usr/share/package-licenses/perl-Text-PDF/deblicense_copyright
