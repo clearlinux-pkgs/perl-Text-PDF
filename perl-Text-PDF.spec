@@ -4,7 +4,7 @@
 #
 Name     : perl-Text-PDF
 Version  : 0.31
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/Text-PDF-0.31.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/Text-PDF-0.31.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libt/libtext-pdf-perl/libtext-pdf-perl_0.31-1.debian.tar.xz
@@ -92,23 +92,23 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Array.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Bool.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Dict.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/File.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Filter.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Name.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Null.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Number.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Objind.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Page.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Pages.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/SFont.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/String.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/TTFont.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/TTFont0.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Text/PDF/Utils.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Array.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Bool.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Dict.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/File.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Filter.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Name.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Null.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Number.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Objind.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Page.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Pages.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/SFont.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/String.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/TTFont.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/TTFont0.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Text/PDF/Utils.pm
 
 %files bin
 %defattr(-,root,root,-)
