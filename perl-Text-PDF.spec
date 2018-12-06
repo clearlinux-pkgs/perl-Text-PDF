@@ -92,23 +92,23 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Array.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Bool.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Dict.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/File.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Filter.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Name.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Null.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Number.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Objind.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Page.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Pages.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/SFont.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/String.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/TTFont.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/TTFont0.pm
-/usr/lib/perl5/vendor_perl/5.28.1Text/PDF/Utils.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Array.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Bool.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Dict.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/File.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Filter.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Name.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Null.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Number.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Objind.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Page.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Pages.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/SFont.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/String.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/TTFont.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/TTFont0.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Text/PDF/Utils.pm
 
 %files bin
 %defattr(-,root,root,-)
