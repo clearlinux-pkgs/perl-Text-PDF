@@ -4,7 +4,7 @@
 #
 Name     : perl-Text-PDF
 Version  : 0.31
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/Text-PDF-0.31.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/Text-PDF-0.31.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libt/libtext-pdf-perl/libtext-pdf-perl_0.31-1.debian.tar.xz
@@ -91,7 +91,7 @@ make TEST_VERBOSE=1 test
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Text-PDF
 cp %{_builddir}/Text-PDF-0.31/LICENSE %{buildroot}/usr/share/package-licenses/perl-Text-PDF/09aa60e68ba922665fa60c4169d550aa34a94c2e
-cp %{_builddir}/Text-PDF-0.31/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-Text-PDF/ee54a13446ab9316d82df3cc0b153c362030e1b4
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-Text-PDF/ee54a13446ab9316d82df3cc0b153c362030e1b4
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -138,20 +138,20 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Array.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Bool.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Dict.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/File.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Filter.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Name.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Null.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Number.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Objind.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Page.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Pages.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/SFont.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/String.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/TTFont.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/TTFont0.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/PDF/Utils.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Array.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Bool.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Dict.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/File.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Filter.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Name.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Null.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Number.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Objind.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Page.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Pages.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/SFont.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/String.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/TTFont.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/TTFont0.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/PDF/Utils.pm
