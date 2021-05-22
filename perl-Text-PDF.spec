@@ -4,7 +4,7 @@
 #
 Name     : perl-Text-PDF
 Version  : 0.31
-Release  : 14
+Release  : 15
 URL      : https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/Text-PDF-0.31.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/Text-PDF-0.31.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libt/libtext-pdf-perl/libtext-pdf-perl_0.31-1.debian.tar.xz
